@@ -1,0 +1,138 @@
+@import url("../indexStyling/stylesheet.css");
+
+body {
+  width: 85vw;
+  margin: auto;
+}
+
+header {
+  z-index: 10;
+}
+
+.gallery-container {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "h2 h2 h2 h2"
+    "p p p p"
+    "img1 img2 img3 img3"
+    "img1 img4 img5 img6";
+  text-align: center;
+
+  .gallery-shortcuts {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+
+    div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.9);
+      opacity: 0;
+
+      a {
+        color: white;
+      }
+    }
+
+    div:hover {
+      opacity: 0.8;
+    }
+  }
+
+  h2 {
+    grid-area: h2;
+    padding-top: 20px;
+  }
+
+  p {
+    grid-area: p;
+    padding-bottom: 30px;
+  }
+
+  .img1 {
+    grid-area: img1;
+    background-image: url("../images/shortcuts/img1.jpg");
+    height: 610px;
+  }
+
+  .img2 {
+    grid-area: img2;
+    background-image: url("../images/shortcuts/img2.jpg");
+  }
+
+  .img3 {
+    grid-area: img3;
+    background-image: url("../images/shortcuts/img3.jpg");
+  }
+
+  .img4 {
+    grid-area: img4;
+    background-image: url("../images/shortcuts/img4.jpg");
+  }
+
+  .img5 {
+    grid-area: img5;
+    background-image: url("../images/shortcuts/img5.jpg");
+  }
+
+  .img6 {
+    grid-area: img6;
+    background-image: url("../images/shortcuts/img6.jpg");
+  }
+}
+
+/* Full Image Pop-Up Window */
+.full-img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.full-img-window {
+  img {
+    max-height: 80vh;
+    max-width: 80vh;
+  }
+
+  .close-btn {
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 7px 9px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gallery-container {
+    display: flex;
+    flex-flow: column wrap;
+
+    .gallery-shortcuts,
+    .img1 {
+      height: 300px;
+      width: 90%;
+      margin: 10px 5%;
+    }
+  }
+}

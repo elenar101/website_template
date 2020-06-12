@@ -1,0 +1,315 @@
+@import url("resetStyling.css");
+
+// GLOBAL STYLES
+
+$primary-pink: #ffa089;
+$primary-blue: #a2add0;
+$background-primary: #f9f9f9;
+$background-secondary: #f2f2f2;
+$text-primary: rgb(29, 28, 28);
+
+body {
+  background-color: $background-primary;
+  color: $text-primary;
+}
+
+h1 {
+  letter-spacing: 0.2px;
+  font-size: 65px;
+  padding: 30px 0;
+  border-radius: 4px;
+}
+
+h2 {
+  letter-spacing: 0.2px;
+  font-size: 40px;
+  padding: 26px 0;
+  border-radius: 4px;
+}
+
+h3 {
+  letter-spacing: 0.2px;
+  font-size: 30px;
+  padding: 20px 0;
+  border-radius: 4px;
+}
+
+h4 {
+  letter-spacing: 0.18px;
+  font-size: 23px;
+  padding: 15px 0;
+  border-radius: 4px;
+}
+
+p {
+  letter-spacing: 0.18px;
+  font-size: 19px;
+  padding: 5px 0;
+  text-align: justify;
+}
+
+header {
+  height: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: white;
+
+  #logo {
+    background: url("../images/logo.png") no-repeat center center/cover;
+    width: 100px;
+    margin-left: 10vw;
+    cursor: pointer;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  ul {
+    width: 400px;
+    max-width: 60%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10vw;
+    align-content: center;
+    font-size: 19px;
+    text-transform: uppercase;
+  }
+}
+
+footer {
+  height: 50px;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  p {
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+// MAIN INDEX PAGE CONTENT
+.showcase {
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  background: url("../images/showcase.jpg") no-repeat center center/cover;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  h1 {
+    width: 90%;
+  }
+}
+
+.main-container {
+  width: 85vw;
+  margin: auto;
+  padding-top: 10px;
+
+  .about-company,
+  .about-services {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 30px;
+
+    h2 {
+      padding: 0;
+    }
+
+    .text,
+    .image {
+      width: 47%;
+      min-width: 300px;
+      min-height: 300px;
+    }
+  }
+
+  .about-company {
+    .image {
+      background-color: $primary-pink;
+      color: $primary-pink;
+      border-radius: 4px;
+    }
+  }
+
+  .about-services {
+    .image {
+      background-color: $primary-blue;
+      color: $primary-blue;
+      border-radius: 4px;
+    }
+  }
+
+  .steps {
+    margin: 45px 0;
+    text-align: center;
+
+    .container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+
+      .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+
+        .number {
+          font-family: fantasy;
+          color: $primary-pink;
+          font-size: 150px;
+        }
+
+        p {
+          width: 250px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .pricing {
+    margin-bottom: 70px;
+
+    h2 {
+      background-color: $primary-blue;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .table {
+      margin-top: 10px;
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+
+      thead {
+        th {
+          text-transform: uppercase;
+          padding: 15px 0;
+          font-size: 20px;
+        }
+      }
+
+      tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+
+        tr {
+          td {
+            padding: 15px 10px;
+            font-size: 17px;
+            text-align: center;
+          }
+          td:first-child {
+            text-align: left;
+          }
+        }
+
+        tr:nth-child(odd) {
+          background: $background-secondary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-container {
+    .about-company {
+      flex-flow: column-reverse wrap;
+      text-align: center;
+
+      .text,
+      .image {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    .about-services {
+      flex-flow: column wrap;
+      text-align: center;
+      margin-bottom: 0px;
+
+      .text,
+      .image {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    #logo {
+      width: 15%;
+    }
+    ul {
+      text-transform: capitalize;
+    }
+  }
+  .main-container {
+    .steps {
+      margin-top: 0;
+
+      .container {
+        .wrapper {
+          padding: 0;
+          padding-bottom: 10px;
+          width: 100%;
+
+          .number {
+            font-size: 90px;
+          }
+          p {
+            max-width: 60%;
+            padding: 0;
+            padding-left: 5%;
+          }
+        }
+      }
+    }
+    .pricing {
+      .table {
+        thead {
+          th {
+            font-size: 15px;
+          }
+        }
+        tbody {
+          tr {
+            td {
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

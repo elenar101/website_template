@@ -1,0 +1,346 @@
+@import url("resetStyling.css");
+body {
+  background-color: #f9f9f9;
+  color: #1d1c1c;
+}
+
+h1 {
+  letter-spacing: 0.2px;
+  font-size: 65px;
+  padding: 30px 0;
+  border-radius: 4px;
+}
+
+h2 {
+  letter-spacing: 0.2px;
+  font-size: 40px;
+  padding: 26px 0;
+  border-radius: 4px;
+}
+
+h3 {
+  letter-spacing: 0.2px;
+  font-size: 30px;
+  padding: 20px 0;
+  border-radius: 4px;
+}
+
+h4 {
+  letter-spacing: 0.18px;
+  font-size: 23px;
+  padding: 15px 0;
+  border-radius: 4px;
+}
+
+p {
+  letter-spacing: 0.18px;
+  font-size: 19px;
+  padding: 5px 0;
+  text-align: justify;
+}
+
+header {
+  height: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-color: white;
+}
+
+header #logo {
+  background: url("../images/logo.png") no-repeat center center/cover;
+  width: 100px;
+  margin-left: 10vw;
+  cursor: pointer;
+}
+
+header #logo a {
+  height: 100%;
+  width: 100%;
+}
+
+header ul {
+  width: 400px;
+  max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10vw;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+footer {
+  height: 50px;
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+footer p {
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.showcase {
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  background: url("../images/showcase.jpg") no-repeat center center/cover;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.showcase h1 {
+  width: 90%;
+}
+
+.main-container {
+  width: 85vw;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.main-container .about-company,
+.main-container .about-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 30px;
+}
+
+.main-container .about-company h2,
+.main-container .about-services h2 {
+  padding: 0;
+}
+
+.main-container .about-company .text,
+.main-container .about-company .image,
+.main-container .about-services .text,
+.main-container .about-services .image {
+  width: 47%;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.main-container .about-company .image {
+  background-color: #ffa089;
+  color: #ffa089;
+  border-radius: 4px;
+}
+
+.main-container .about-services .image {
+  background-color: #a2add0;
+  color: #a2add0;
+  border-radius: 4px;
+}
+
+.main-container .steps {
+  margin: 45px 0;
+  text-align: center;
+}
+
+.main-container .steps .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .steps .container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+}
+
+.main-container .steps .container .wrapper .number {
+  font-family: fantasy;
+  color: #ffa089;
+  font-size: 150px;
+}
+
+.main-container .steps .container .wrapper p {
+  width: 250px;
+  padding: 15px;
+}
+
+.main-container .pricing {
+  margin-bottom: 70px;
+}
+
+.main-container .pricing h2 {
+  background-color: #a2add0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.main-container .pricing .table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.main-container .pricing .table thead th {
+  text-transform: uppercase;
+  padding: 15px 0;
+  font-size: 20px;
+}
+
+.main-container .pricing .table tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.main-container .pricing .table tbody tr td {
+  padding: 15px 10px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.main-container .pricing .table tbody tr td:first-child {
+  text-align: left;
+}
+
+.main-container .pricing .table tbody tr:nth-child(odd) {
+  background: #f2f2f2;
+}
+
+@media screen and (max-width: 900px) {
+  .main-container .about-company {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse wrap;
+            flex-flow: column-reverse wrap;
+    text-align: center;
+  }
+  .main-container .about-company .text,
+  .main-container .about-company .image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main-container .about-services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .main-container .about-services .text,
+  .main-container .about-services .image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header #logo {
+    width: 15%;
+  }
+  header ul {
+    text-transform: capitalize;
+  }
+  .main-container .steps {
+    margin-top: 0;
+  }
+  .main-container .steps .container .wrapper {
+    padding: 0;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .main-container .steps .container .wrapper .number {
+    font-size: 90px;
+  }
+  .main-container .steps .container .wrapper p {
+    max-width: 60%;
+    padding: 0;
+    padding-left: 5%;
+  }
+  .main-container .pricing .table thead th {
+    font-size: 15px;
+  }
+  .main-container .pricing .table tbody tr td {
+    padding: 10px 0;
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
